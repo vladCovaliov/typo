@@ -27,6 +27,7 @@ source :rubygems
 
 gem 'thin'
 gem 'rails', '~> 3.0.10'
+gem 'haml'
 gem 'require_relative'
 gem 'htmlentities'
 gem 'json'
@@ -45,6 +46,7 @@ gem 'acts_as_tree_rails3'
 gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
 
 group :development, :test do
+  gem 'pry'
   gem 'ruby-debug19'
   gem 'factory_girl', '~> 2.2'
   gem 'webrat'
