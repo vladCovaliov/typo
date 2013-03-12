@@ -25,7 +25,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def new_or_edit
     @categories = Category.find(:all)
-    id = params[:id] or @categories.last.id+1
+    id = (params[:id] or @categories.map{|x| x.id}.max + 1)
     @category = Category.find_or_initialize_by_id(id)
     @category.attributes = params[:category] if @category
     if request.post?
